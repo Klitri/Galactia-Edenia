@@ -46,19 +46,22 @@ Partial Class Ship
         Me.btnWithdraw = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.lblInterest = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnReset = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuInfo = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPin = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblPin = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnPin = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCash = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblCash = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReadTestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.timHyperDrive = New System.Windows.Forms.Timer(Me.components)
         Me.timBreath = New System.Windows.Forms.Timer(Me.components)
         Me.timSuitSync = New System.Windows.Forms.Timer(Me.components)
         Me.timCloning = New System.Windows.Forms.Timer(Me.components)
         Me.timBank = New System.Windows.Forms.Timer(Me.components)
-        Me.btnReset = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnNavigation = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnSave = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnLoad = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveFile = New System.Windows.Forms.SaveFileDialog()
         Me.mnuShipControls.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,7 +75,7 @@ Partial Class Ship
         Me.mnuShipControls.AutoSize = False
         Me.mnuShipControls.BackColor = System.Drawing.SystemColors.ControlDark
         Me.mnuShipControls.Dock = System.Windows.Forms.DockStyle.Left
-        Me.mnuShipControls.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblGUT, Me.btnBeam, Me.mnuSuit, Me.btnPrintReport, Me.HyperDriveMenu, Me.btnCryostasis, Me.MedicalStatusToolStripMenuItem, Me.btnBank, Me.mnuInfo, Me.ReadTestToolStripMenuItem})
+        Me.mnuShipControls.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblGUT, Me.btnBeam, Me.btnNavigation, Me.mnuSuit, Me.btnPrintReport, Me.HyperDriveMenu, Me.btnCryostasis, Me.MedicalStatusToolStripMenuItem, Me.btnBank, Me.mnuInfo})
         Me.mnuShipControls.Location = New System.Drawing.Point(0, 0)
         Me.mnuShipControls.Name = "mnuShipControls"
         Me.mnuShipControls.Size = New System.Drawing.Size(135, 261)
@@ -212,6 +215,12 @@ Partial Class Ship
         Me.lblInterest.Size = New System.Drawing.Size(189, 22)
         Me.lblInterest.Text = "Interest Rate"
         '
+        'btnReset
+        '
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(189, 22)
+        Me.btnReset.Text = "Reset Bank Account"
+        '
         'mnuInfo
         '
         Me.mnuInfo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPin, Me.mnuCash})
@@ -223,7 +232,7 @@ Partial Class Ship
         '
         Me.mnuPin.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblPin, Me.btnPin})
         Me.mnuPin.Name = "mnuPin"
-        Me.mnuPin.Size = New System.Drawing.Size(152, 22)
+        Me.mnuPin.Size = New System.Drawing.Size(124, 22)
         Me.mnuPin.Text = "Bank Pin"
         '
         'lblPin
@@ -242,7 +251,7 @@ Partial Class Ship
         '
         Me.mnuCash.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblCash})
         Me.mnuCash.Name = "mnuCash"
-        Me.mnuCash.Size = New System.Drawing.Size(152, 22)
+        Me.mnuCash.Size = New System.Drawing.Size(124, 22)
         Me.mnuCash.Text = "Cash"
         '
         'lblCash
@@ -250,13 +259,6 @@ Partial Class Ship
         Me.lblCash.Name = "lblCash"
         Me.lblCash.Size = New System.Drawing.Size(90, 22)
         Me.lblCash.Text = "$0"
-        '
-        'ReadTestToolStripMenuItem
-        '
-        Me.ReadTestToolStripMenuItem.Enabled = False
-        Me.ReadTestToolStripMenuItem.Name = "ReadTestToolStripMenuItem"
-        Me.ReadTestToolStripMenuItem.Size = New System.Drawing.Size(128, 21)
-        Me.ReadTestToolStripMenuItem.Text = "ReadTest WIP"
         '
         'timHyperDrive
         '
@@ -279,11 +281,24 @@ Partial Class Ship
         Me.timBank.Enabled = True
         Me.timBank.Interval = 1000
         '
-        'btnReset
+        'btnNavigation
         '
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(189, 22)
-        Me.btnReset.Text = "Reset Bank Account"
+        Me.btnNavigation.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnSave, Me.btnLoad})
+        Me.btnNavigation.Name = "btnNavigation"
+        Me.btnNavigation.Size = New System.Drawing.Size(128, 21)
+        Me.btnNavigation.Text = "Navigation"
+        '
+        'btnSave
+        '
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(180, 22)
+        Me.btnSave.Text = "Save Coordinates"
+        '
+        'btnLoad
+        '
+        Me.btnLoad.Name = "btnLoad"
+        Me.btnLoad.Size = New System.Drawing.Size(180, 22)
+        Me.btnLoad.Text = "Load Coordinates"
         '
         'Ship
         '
@@ -311,7 +326,6 @@ Partial Class Ship
     Friend WithEvents FTLCharge As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents timHyperDrive As System.Windows.Forms.Timer
     Friend WithEvents lblGUT As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ReadTestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnCryostasis As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MedicalStatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnCheckStatus As System.Windows.Forms.ToolStripMenuItem
@@ -338,4 +352,8 @@ Partial Class Ship
     Friend WithEvents lblInterest As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents timBank As System.Windows.Forms.Timer
     Friend WithEvents btnReset As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btnNavigation As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btnSave As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btnLoad As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SaveFile As System.Windows.Forms.SaveFileDialog
 End Class

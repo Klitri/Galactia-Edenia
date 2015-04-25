@@ -98,30 +98,6 @@
         End If
     End Sub
 
-    Private Sub ReadTestToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReadTestToolStripMenuItem.Click
-        Dim filepath As String
-        Dim contents As String
-        Dim scan As String
-        Dim longsize As Integer
-
-        filepath = InputBox("Enter path", "Path")
-
-        contents = My.Computer.FileSystem.ReadAllText(filepath)
-
-        MsgBox(contents)
-
-        For i = 0 To contents.Length - 1
-            scan = contents.Substring(i, 1)
-            longsize += 1
-            If scan = "," Then
-                MsgBox(contents.Substring(i + 1, longsize) & " A " & longsize)
-                longsize = 0
-                scan = Nothing
-            End If
-        Next
-        'dblPlanetOxygen = contents.Substring()
-    End Sub
-
     Private Sub btnCryostasis_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCryostasis.Click
         Dim sleep As Integer
         Dim days As Integer
@@ -425,5 +401,19 @@
             End If
             MsgBox("Account reset")
         End If
+    End Sub
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+        Dim identifier As String
+
+        MsgBox("Saving coordinates...")
+
+        identifier = InputBox("Please input a special name for the planet.", "Name")
+
+        SaveFile.DefaultExt = ".pla"
+        SaveFile.FileName = identifier
+        SaveFile.InitialDirectory = "C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Planets"
+
+        SaveFile.ShowDialog()
     End Sub
 End Class

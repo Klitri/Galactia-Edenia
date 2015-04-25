@@ -9,3 +9,14 @@ C:\Users\Kyle\documents\visual studio 2010\Projects\Galactia Edenia\Galactia Ede
 C:\Users\Kyle\documents\visual studio 2010\Projects\Galactia Edenia\Galactia Edenia\obj\x86\Debug\Galactia Edenia.pdb
 C:\Users\Kyle\documents\visual studio 2010\Projects\Galactia Edenia\Galactia Edenia\obj\x86\Debug\WindowsApplication1.Ship.resources
 C:\Users\Kyle\documents\visual studio 2010\Projects\Galactia Edenia\Galactia Edenia\obj\x86\Debug\WindowsApplication1.PlanetModder.resources
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\obj\x86\Debug\Galactia Edenia.xml
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\obj\x86\Debug\Galactia Edenia.pdb
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\bin\Debug\Galactia Edenia.exe
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\bin\Debug\Galactia Edenia.pdb
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\bin\Debug\Galactia Edenia.xml
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\obj\x86\Debug\Galactia Edenia.vbproj.GenerateResource.Cache
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\obj\x86\Debug\Galactia Edenia.exe
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\obj\x86\Debug\GalactiaEdenia.frmMain.resources
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\obj\x86\Debug\GalactiaEdenia.Resources.resources
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\obj\x86\Debug\GalactiaEdenia.PlanetModder.resources
+C:\Users\Kyle\Desktop\Galactia Edenia Project Core\Galactia-Edenia\Galactia Edenia\Galactia Edenia\obj\x86\Debug\GalactiaEdenia.Ship.resources
